@@ -12,4 +12,6 @@
 	}
 
 
+	echo "<link rel='room' href='http://www/room?name={$roomname}'>";
+
 ?>
