@@ -1,0 +1,20 @@
+データベース仕様
+
+１
+部屋管理用テーブル room
+room_id:primary key not null
+date:datestamp notnull
+room_name:notnull
+share:notnull
+
+create table room (room_id int(16)primary key not null, data datastamp not null, room_name varchar(20) not null, share varchar(10) not null);
+
+２
+アイデアの管理用テーブル
+idea_id:primary key not null auto_increment
+room_id:
+date:datestamp notnull
+idea_text
+
+create table idea (idea_id int(16) primary key not null auto_increment, room_id int(16) not null, idea_data datastamp not null, idea_text varchar(30), text_kind varchar(20) not null);
+
