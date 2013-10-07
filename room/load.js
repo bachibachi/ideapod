@@ -3,6 +3,7 @@ function load() {
 	tag1.addEventListener("load", load, false);
 }
 
-function () {
-
+function XMLhttpRequest () {
+	xml = XMLHttpRequest();
+	
 } 
