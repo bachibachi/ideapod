@@ -17,7 +17,15 @@
 	if(!file_exists($file_name)){
 		touch($file_name);
 		$file = file_get_contents($file_tmpl);
-		$file .= "";
+		$file .= <<<EOL
+				<html>
+					<head>
+					</head>
+					<body>
+					</body>
+					
+				</html>
+EOL;
 	file_put_contents($file_name, $file);
 	} else {
 		exit();
