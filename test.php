@@ -3,4 +3,6 @@
 echo "test";
 echo "これからがんばろー！！"
 
+test;
+
 ?>
