@@ -1,5 +1,0 @@
-発言管理用テーブル
-room_id int primary key not null
-user_name varchar(20) not null
-mention varchar(100)
-date timestamp
