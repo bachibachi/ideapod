@@ -2,16 +2,18 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-
+<script type="text/javascript" src="room.js"></script>
 <title>ここには部屋名が入る</title>
 </head>
 
 <body>
-<script type="text/javascript" src="room.js"></script>
-<form name="form" onSubmit="insertMessage()">
-<input type="text" name="message">
-<input type="submit" value="送信" >
-</form>
+<div id="display">
+</div>
+
+
+<input id="message" type="text" name="message">
+<input type="submit" value="送信" onclick="insertMessage()">
+
 </body>
 
 
