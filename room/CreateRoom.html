@@ -1,12 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
+<meta charset=utf-8>
 </head>
 <body>
-
-<form method="POST" action="CreateRoom.php">
-	<input type="text" name="roomname" value="">
-	<input type="checkbox" name="share" value="private">
-	<input type="checkbox" name="share" value="public">
+<form method="POST" action="CreateRoomController.php">
+	<a>部屋名<input type="text" name="roomname" value=""></a>
+	<a><input type="radio" name="share" value="private">非公開</a>
+	<a><input type="radio" name="share" value="public">公開</a>
+	<a><input type="password" name="pass" value=""></a>
 	<input type="submit" name="" value="送信">
 </form>
 </body>

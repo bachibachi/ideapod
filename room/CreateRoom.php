@@ -1,5 +1,5 @@
 <?php
-
+	require "db_conf.php";
 	$file_name = "tmpl.php";
 	$roomName = $_POST['roomname'];
 	$share    = $_POST['share'];
