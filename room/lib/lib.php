@@ -31,7 +31,8 @@
 	class check {
 
 		public function checkMsg ($msg) {
-			htmlspecialchars($msg);
+			$checked_msg = htmlspecialchars($msg);
+			return $checked_msg;
 		}
 	}
 

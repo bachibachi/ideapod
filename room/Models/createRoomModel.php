@@ -2,11 +2,13 @@
 	require_once 'lib.php';
 	class createRoomModel {
 
-		public function createRoom () {
+		public function createRoom ($room) {
 			$db = new db();
 			$db->dbConnect();
-			$db->dbQuery($query, $queryKind);
-			$db->dbCut();	
+			$query = "insert into room (name, share, pass) values ('{$room['roomName']}', '{$room['share']}', '{$room['roomPassword']}');";
+			$result = $db->dbQuery($query, "insert");
+			$db->dbCut();
+			return $result;	
 		}
 
 		public function setTemplate ($roomName) {

@@ -2,14 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset=utf-8>
+<link rel="stylesheet" type="text/css" href="CreateRoom.css">
 </head>
 <body>
-<form method="POST" action="CreateRoomController.php">
-	<a>部屋名<input type="text" name="roomname" value=""></a>
-	<a><input type="radio" name="share" value="private">非公開</a>
-	<a><input type="radio" name="share" value="public">公開</a>
-	<a><input type="password" name="pass" value=""></a>
-	<input type="submit" name="" value="送信">
-</form>
+<div id="input_form">
+	<form method="POST" action="createRoomController.php">
+		<p class="form">部屋名<input type="text" name="roomname" value=""></p>
+		<p class="form"><input type="radio" name="share" value="private">非公開</p>
+		<p class="form"><input type="radio" name="share" value="public">公開</p>
+		<p class="form"><input type="password" name="pass" value=""></p>
+		<input class="btn form" type="submit" name="" value="送信">
+	</form>
+</div>
 </body>
 </html>
