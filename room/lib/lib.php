@@ -3,28 +3,24 @@
 	
 	class db {
 		
-		public function checkMsg () {
-			
-		}
-
 		public function dbConnect () {
 			require_once 'db_conf.php';
-			//$createRoomPdo = new PDO("mysql:localhost; dbname=ideapod", "root", "bachibachi");
 			$createRoomPdo = new PDO("mysql:dbname=ideapod; host=localhost", "root", "bachibachi");			
+			return $createRoomPdo;
 		}
 	
-		public function dbQuery ($query, $query_kind) {
+		public function dbQuery ($Pdo, $query, $query_kind) {
 			if ($query_kind === "insert") {
-				$result = $createRoomPdo->exec($query);
+				$result = $Pdo->exec($query);
 			} else {
-				$result = $createRoomPdo->query($query);
+				$result = $Pdo->query($query);
 			}
 
 			return $result;
 		}
 
-		public function dbCut () {
-			unset($createRoomPdo);
+		public function dbCut ($Pdo) {
+			unset($Pdo);
 		}
 	}
 	

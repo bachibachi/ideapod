@@ -4,10 +4,10 @@
 
 		public function createRoom ($room) {
 			$db = new db();
-			$db->dbConnect();
-			$query = "insert into room (name, share, pass) values ('{$room['roomName']}', '{$room['share']}', '{$room['roomPassword']}');";
-			$result = $db->dbQuery($query, "insert");
-			$db->dbCut();
+			$createRoomPdo = $db->dbConnect();
+			$query = "insert into room (room_name, share, password) values ('{$room['roomName']}', '{$room['scope']}', '{$room['roomPassword']}')";
+			$result = $db->dbQuery($createRoomPdo, $query, "insert");
+			$db->dbCut($createRoomPdo);
 			return $result;	
 		}
 
@@ -16,12 +16,15 @@
 			if (!file_exists($fileName)) {
 				touch($fileName);
 				$file .= <<<EOL
-						<html>
-						<head>
-						</head>
-						<body>
-						</body>
-						</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<a><?php echo room['roomName']></a>
+</body>
+</html>
 EOL;
 				file_put_contents($fileName, $file);
 			} else {

@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<a><?php echo $roomName; ?><link href="http://<?php echo $roomName; ?>"></a>
+<a href="http://<?php echo $roomName; ?>"><?php echo $roomName; ?></a>
 
 </body>
 </html>
