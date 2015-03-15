@@ -1,8 +1,8 @@
 <?php
 	$db = array(
 		'host' 	 => 'localhost',
-		'user' 	 => 'bachibachi',
-		'pass'   => 'bachibachi',
+		'user' 	 => '',
+		'pass'   => '',
 		'dbname' => 'ideapod',
 	);
 
